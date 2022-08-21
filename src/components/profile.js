@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/profile.scss";
 import { InputComponent, SelectComponent } from "./inputComponents";
 import { statesLGA } from "../utils/statesLGA";
 
 const Profile = () => {
+  const [selectedState, setSelectedState] = useState("");
   return (
     <div className="profile-container">
       <div className="profile-inner">
@@ -45,8 +46,19 @@ const Profile = () => {
             type="text"
           />
           <div className="state-lga">
-            <InputComponent label="Local Government" className="lga" />
-            <SelectComponent label="State" className="state">
+            <SelectComponent label="Local Government" className="lga">
+              {selectedState.length > 0 &&
+                statesLGA[selectedState].map((lga, id) => {
+                  return <option key={id}>{lga}</option>;
+                })}
+            </SelectComponent>
+
+            <SelectComponent
+              label="State"
+              className="state"
+              value={selectedState}
+              onChange={(e) => setSelectedState(e.target.value)}
+            >
               <option disabled>Plase select your state</option>
               {Object.keys(statesLGA).map((state, id) => {
                 return <option key={id}>{state}</option>;
