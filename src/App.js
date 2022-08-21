@@ -1,9 +1,12 @@
-import Profile from "./components/profile";
+import { FormProvider } from "./context/FormContext";
+import MainComponent from "./main";
 
 function App() {
   return (
     <div className="App">
-      <Profile />
+      <FormProvider>
+        <MainComponent />
+      </FormProvider>
     </div>
   );
 }

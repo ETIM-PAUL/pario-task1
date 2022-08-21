@@ -1,7 +1,12 @@
 import React from "react";
+import Profile from "./components/profile";
 
 const MainComponent = () => {
-  return <div>MainComponent</div>;
+  return (
+    <div>
+      <Profile />
+    </div>
+  );
 };
 
 export default MainComponent;
