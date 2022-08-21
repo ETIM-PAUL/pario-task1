@@ -1,0 +1,30 @@
+@import "base.scss";
+
+.input-container {
+  margin-top: 10px;
+}
+
+.label-children {
+  display: grid;
+  .email-redirect {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+
+    color: #817e9e;
+  }
+}
+label {
+  line-height: $font-weight;
+  font-size: 16px;
+  line-height: 30px;
+}
+input {
+  margin: 10px auto;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #4e598c;
+  border-radius: 10px;
+  height: 35px;
+  padding: 3px 7px;
+}

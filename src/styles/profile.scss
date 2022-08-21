@@ -1,0 +1,74 @@
+@import "base.scss";
+
+.profile-container {
+  background-image: $set_bg_image;
+  height: auto;
+  // overflow: hidden;
+}
+
+.profile-inner {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 70%;
+}
+
+.top-header {
+  font-weight: $font-weight;
+  font-size: 27px;
+  line-height: 50px;
+  color: #4e598c;
+}
+
+.stages-info {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  align-self: center;
+  span {
+    text-transform: capitalize;
+    font-weight: $font-weight;
+    font-size: 18px;
+    line-height: 34px;
+    color: #bdbdbd;
+  }
+  .current-stage {
+    color: $primary-color;
+  }
+}
+
+.horizontal-line {
+  margin-top: 15px;
+  width: 550px;
+  background-color: black;
+  height: 1px;
+}
+
+.horizontal-stage-indicator {
+  background-color: $primary-color;
+  width: 120px;
+  height: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 21.7%;
+}
+
+.form-container {
+  margin-top: 3rem;
+  width: 550px;
+}
+
+.state-lga {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  &:nth-child(1) {
+    flex-grow: 1;
+  }
+  &:nth-child(2) {
+    flex-grow: 1;
+  }
+}
+
+.lga {
+  width: 350px;
+}
