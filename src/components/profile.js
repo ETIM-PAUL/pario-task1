@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/profile.scss";
-import InputComponent from "./inputComponents";
+import { InputComponent, SelectComponent } from "./inputComponents";
+import { statesLGA } from "../utils/statesLGA";
 
 const Profile = () => {
   return (
@@ -27,6 +28,7 @@ const Profile = () => {
             label="Email Address *"
             placeholder="Plase input your email"
             type="email"
+            required={true}
           >
             <span className="email-redirect">
               The purchase reciept would be sent to this address
@@ -44,7 +46,12 @@ const Profile = () => {
           />
           <div className="state-lga">
             <InputComponent label="Local Government" className="lga" />
-            <InputComponent label="State" />
+            <SelectComponent label="State" className="state">
+              <option disabled>Plase select your state</option>
+              {Object.keys(statesLGA).map((state, id) => {
+                return <option key={id}>{state}</option>;
+              })}
+            </SelectComponent>
           </div>
         </div>
       </div>

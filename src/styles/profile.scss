@@ -3,7 +3,7 @@
 .profile-container {
   background-image: $set_bg_image;
   height: auto;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .profile-inner {
@@ -39,6 +39,7 @@
 .horizontal-line {
   margin-top: 15px;
   width: 550px;
+  max-width: 550px;
   background-color: black;
   height: 1px;
 }
@@ -60,6 +61,7 @@
 .state-lga {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
   align-self: center;
   &:nth-child(1) {
     flex-grow: 1;
@@ -71,4 +73,7 @@
 
 .lga {
   width: 350px;
+}
+.state {
+  width: 185px;
 }

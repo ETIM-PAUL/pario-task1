@@ -19,7 +19,8 @@ label {
   font-size: 16px;
   line-height: 30px;
 }
-input {
+input,
+select {
   margin: 10px auto;
   width: 100%;
   background: #ffffff;
@@ -27,4 +28,7 @@ input {
   border-radius: 10px;
   height: 35px;
   padding: 3px 7px;
+}
+select {
+  height: 42px !important;
 }

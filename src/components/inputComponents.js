@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/input.scss";
-const InputComponent = ({ children, ...props }) => {
+export const InputComponent = ({ children, ...props }) => {
   return (
     <div className="input-container">
       <div className="label-children">
@@ -11,5 +11,13 @@ const InputComponent = ({ children, ...props }) => {
     </div>
   );
 };
-
-export default InputComponent;
+export const SelectComponent = ({ children, ...props }) => {
+  return (
+    <div className="input-container">
+      <div className="label-children">
+        <label>{props.label}</label>
+      </div>
+      <select {...props}>{children}</select>
+    </div>
+  );
+};
