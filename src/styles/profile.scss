@@ -2,14 +2,18 @@
 
 .profile-container {
   background-image: $set_bg_image;
+  background-repeat: no-repeat;
+  object-fit: cover;
   height: auto;
   overflow: hidden;
 }
 
 .profile-inner {
   margin: 0 auto;
-  padding-top: 30px;
+  padding: 5rem 3rem;
   width: 70%;
+  justify-items: center;
+  display: grid;
 }
 
 .top-header {
@@ -50,7 +54,7 @@
   height: 10px;
   border-radius: 10px;
   position: absolute;
-  top: 21.7%;
+  top: 27.8%;
 }
 
 .form-container {
@@ -75,5 +79,10 @@
   width: 350px;
 }
 .state {
-  width: 185px;
+  width: 200px;
+}
+
+.btn-flex {
+  display: inline-flex;
+  gap: 30px;
 }

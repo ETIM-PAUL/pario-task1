@@ -1,7 +1,7 @@
 @import "base.scss";
 
 .input-container {
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 .label-children {
@@ -31,4 +31,43 @@ select {
 }
 select {
   height: 42px !important;
+}
+
+.error {
+  color: rgb(186, 33, 33);
+  font-size: 10px;
+}
+
+.btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.cancel-btn {
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    background-color: rgb(244, 238, 238) !important;
+  }
+}
+
+.next-btn {
+  background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
+  color: white;
+  padding: 10px 20px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    background-color: #d96a07;
+  }
+}
+
+.btn-value {
+  font-size: 15px;
+  line-height: 25px;
 }
