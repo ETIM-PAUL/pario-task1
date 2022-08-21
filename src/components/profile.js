@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/profile.scss";
 import { InputComponent, SelectComponent, Button } from "./inputComponents";
 import { statesLGA } from "../utils/statesLGA";
 import Heading from "./heading";
 import { Formik, Form } from "formik";
 import { yupValidation } from "../utils/utils";
+import { useForm } from "../context/FormContext";
 
 const Profile = () => {
   const [selectedState, setSelectedState] = useState("");
+  const { state, dispatch } = useForm();
+
+  // useEffect(() => {
+  //   dispatch({ type: "setStep", payload: "personal info" });
+  // }, [dispatch]);
+
   return (
     <div className="profile-container">
       <div className="profile-inner">
@@ -27,6 +34,8 @@ const Profile = () => {
             onSubmit={(values, { setSubmitting }) => {
               setTimeout(() => {
                 setSubmitting();
+                dispatch({ type: "setStep", payload: "billing info" });
+
                 console.log(values);
               }, 500);
             }}
@@ -100,7 +109,16 @@ const Profile = () => {
                     >
                       <span className="btn-value">Next</span>
                     </Button>
-                    <Button className="cancel-btn btn" type="button">
+                    <Button
+                      className="cancel-btn btn"
+                      type="button"
+                      onClick={() =>
+                        dispatch({
+                          type: "clearSession",
+                          payload: "personal info",
+                        })
+                      }
+                    >
                       <span className="btn-value btn">Cancel Payment</span>
                     </Button>
                   </div>

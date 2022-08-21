@@ -1,7 +1,9 @@
 import React from "react";
+import { useForm } from "../context/FormContext";
 
 const Heading = () => {
-  let current = "personal info";
+  const { state } = useForm();
+
   const steps = ["personal info", "billing info", "confirm payment"];
   return (
     <div>
@@ -12,11 +14,11 @@ const Heading = () => {
         {steps.map((step, id) => {
           return (
             <span
-              className={current === step ? "current-stage" : null}
+              className={state.currentStep === step ? "current-stage" : null}
               key={id}
             >
               {step}
-              {current === step && (
+              {state.currentStep === step && (
                 <div className="horizontal-stage-indicator"></div>
               )}
             </span>

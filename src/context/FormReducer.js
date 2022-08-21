@@ -1,15 +1,24 @@
 export function formReducer(state, { type, payload }) {
   switch (type) {
     case "setStep": {
+      sessionStorage.setItem("current-step", payload);
       return {
         ...state,
         currentStep: payload,
       };
     }
-    case "setPlaylists": {
+    case "setEnteredData": {
       return {
         ...state,
         enteredData: { ...state.enteredData, payload },
+      };
+    }
+    case "clearSession": {
+      sessionStorage.clear();
+
+      return {
+        ...state,
+        currentStep: payload,
       };
     }
     default: {

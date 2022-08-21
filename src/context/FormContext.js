@@ -5,7 +5,9 @@ const FormContext = createContext();
 
 const FormProvider = ({ children }) => {
   const [state, dispatch] = useReducer(formReducer, {
-    currentStep: "personal info",
+    currentStep: sessionStorage.getItem("current-step")
+      ? sessionStorage.getItem("current-step")
+      : "personal info",
     enteredData: {},
   });
 
