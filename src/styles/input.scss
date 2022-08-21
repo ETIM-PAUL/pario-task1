@@ -30,7 +30,7 @@ select {
   padding: 3px 7px;
 }
 select {
-  height: 42px !important;
+  height: 43px;
 }
 
 .error {
@@ -63,7 +63,18 @@ select {
   border-radius: 10px;
   border: none;
   &:hover {
-    background-color: #d96a07;
+    cursor: pointer;
+  }
+}
+.disable-btn {
+  background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
+  color: white;
+  padding: 10px 20px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  &:hover {
+    cursor: no-drop;
   }
 }
 

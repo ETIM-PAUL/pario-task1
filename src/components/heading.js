@@ -1,18 +1,29 @@
 import React from "react";
 
 const Heading = () => {
+  let current = "personal info";
+  const steps = ["personal info", "billing info", "confirm payment"];
   return (
     <div>
       <div className="top-header">
         <p>Complete your Purchase</p>
       </div>
       <div className="stages-info">
-        <span className="info current-stage">personal info</span>
-        <span className="info">billing info</span>
-        <span className="info">confirm payment</span>
+        {steps.map((step, id) => {
+          return (
+            <span
+              className={current === step ? "current-stage" : null}
+              key={id}
+            >
+              {step}
+              {current === step && (
+                <div className="horizontal-stage-indicator"></div>
+              )}
+            </span>
+          );
+        })}
       </div>
       <div className="horizontal-line"></div>
-      <div className="horizontal-stage-indicator"></div>
     </div>
   );
 };

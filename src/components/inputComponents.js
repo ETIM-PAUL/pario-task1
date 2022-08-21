@@ -18,7 +18,7 @@ export const InputComponent = ({ children, ...props }) => {
   );
 };
 export const SelectComponent = ({ children, ...props }) => {
-  const [field, meta] = useField(props);
+  const [field] = useField(props);
 
   return (
     <div className="input-container">
