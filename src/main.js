@@ -12,12 +12,12 @@ const MainComponent = () => {
   return (
     <div className="component-container">
       <div className="component-inner">
-        <Heading />
+        {currentStep !== "completed" && <Heading />}
         <br />
         {currentStep === steps[0] && <Profile />}
         {currentStep === steps[1] && <Billing />}
         {currentStep === steps[2] && <ConfirmPayment />}
-        {currentStep === steps[3] && <Completed />}
+        {currentStep === "completed" && <Completed />}
       </div>
     </div>
   );

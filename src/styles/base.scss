@@ -5,3 +5,16 @@ $border-radius: 10px;
 $primary-color: #f2994a;
 $secondary-color: #4e598c;
 $btn-primary-bg-color: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
+
+.component-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.component-inner {
+  margin: 0 auto;
+  padding: 5rem 3rem;
+  width: 70%;
+  justify-items: center;
+  display: grid;
+}
