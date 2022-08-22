@@ -8,7 +8,7 @@ export function formReducer(state, { type, payload }) {
       };
     }
     case "setEnteredData": {
-      sessionStorage.setItem("entered-data", state.enteredData);
+      sessionStorage.setItem("entered-data", payload);
 
       return {
         ...state,
