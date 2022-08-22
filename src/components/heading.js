@@ -1,7 +1,12 @@
 import React from "react";
 import { useForm } from "../context/FormContext";
 
-export const steps = ["personal info", "billing info", "confirm payment"];
+export const steps = [
+  "personal info",
+  "billing info",
+  "confirm payment",
+  "completed",
+];
 const Heading = () => {
   const { state } = useForm();
 

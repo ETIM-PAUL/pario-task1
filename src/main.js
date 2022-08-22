@@ -1,5 +1,6 @@
 import React from "react";
 import Billing from "./components/billing";
+import Completed from "./components/completed";
 import ConfirmPayment from "./components/confirmPayment";
 import Heading, { steps } from "./components/heading";
 import Profile from "./components/profile";
@@ -16,6 +17,7 @@ const MainComponent = () => {
         {currentStep === steps[0] && <Profile />}
         {currentStep === steps[1] && <Billing />}
         {currentStep === steps[2] && <ConfirmPayment />}
+        {currentStep === steps[3] && <Completed />}
       </div>
     </div>
   );
