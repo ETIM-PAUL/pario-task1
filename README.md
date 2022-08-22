@@ -7,4 +7,4 @@ In the project app:
 
 when the user inputs data, it validates the user input and only allows the user to move ahead, only when there are no errors in the form.
 
-link to the live app -> https://github.com/ETIM-PAUL/pario-task1
+link to the live app -> https://pario-task1.vercel.app/
