@@ -1,36 +1,42 @@
 @import "base.scss";
 
 .input-container {
-  margin: 10px auto;
+  margin: 10px 0;
 }
 
-.label-children {
-  display: grid;
-  .email-redirect {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 24px;
+.email-redirect {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
 
-    color: #817e9e;
-  }
+  color: #817e9e;
 }
+
 label {
   line-height: $font-weight;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 30px;
+  font-weight: $font-weight;
+  display: flex;
+  gap: 8px;
 }
 input,
 select {
-  margin: 10px auto;
+  margin: 10px 0px;
   width: 100%;
+  max-width: -webkit-fill-available;
   background: #ffffff;
   border: 1px solid #4e598c;
   border-radius: 10px;
   height: 35px;
-  padding: 3px 7px;
+  padding: 3px 14px;
+}
+
+.asterisk {
+  color: #eb5757;
 }
 select {
-  height: 43px;
+  height: 45px;
 }
 
 .error {
@@ -39,17 +45,18 @@ select {
 }
 
 .btn {
+  padding: 10px 20px;
+  width: 170px;
+  font-weight: $font-weight;
+  border-radius: 10px;
+  border: none;
   &:hover {
     cursor: pointer;
   }
 }
 .cancel-btn {
   background-color: transparent;
-  color: black;
-  padding: 10px 20px;
-  width: 170px;
-  border-radius: 10px;
-  border: none;
+  color: #4e598c;
   &:hover {
     background-color: rgb(244, 238, 238) !important;
   }
@@ -58,10 +65,7 @@ select {
 .next-btn {
   background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
   color: white;
-  padding: 10px 20px;
-  width: 170px;
-  border-radius: 10px;
-  border: none;
+
   &:hover {
     cursor: pointer;
   }
@@ -69,10 +73,6 @@ select {
 .disable-btn {
   background: linear-gradient(180deg, #f2c94c 0%, #f2994a 100%);
   color: white;
-  padding: 10px 20px;
-  width: 170px;
-  border-radius: 10px;
-  border: none;
   &:hover {
     cursor: no-drop;
   }

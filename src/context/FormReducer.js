@@ -8,9 +8,11 @@ export function formReducer(state, { type, payload }) {
       };
     }
     case "setEnteredData": {
+      sessionStorage.setItem("entered-data", state.enteredData);
+
       return {
         ...state,
-        enteredData: { ...state.enteredData, payload },
+        enteredData: payload,
       };
     }
     case "clearSession": {

@@ -6,12 +6,13 @@ export const InputComponent = ({ children, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <div className="input-container">
-      <div className="label-children">
-        <label>{props.label}</label>
-        {children}
-      </div>
+      <label>
+        {props.label} <span className="asterisk">{props.asterisk}</span>
+      </label>
       <input {...field} {...props} />
-      {(meta.touched && meta.error) || (meta.error && meta.value === "") ? (
+      {(meta.touched && meta.error) ||
+      (meta.error && meta.value !== "") ||
+      (meta.error && meta.value === "") ? (
         <div className="error">{meta.error}</div>
       ) : null}
     </div>
@@ -22,9 +23,9 @@ export const SelectComponent = ({ children, ...props }) => {
 
   return (
     <div className="input-container">
-      <div className="label-children">
-        <label>{props.label}</label>
-      </div>
+      <label>
+        {props.label} <span className="asterisk">{props.asterisk}</span>
+      </label>
       <select {...field} {...props}>
         {children}
       </select>

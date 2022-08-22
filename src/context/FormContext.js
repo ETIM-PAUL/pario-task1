@@ -8,7 +8,9 @@ const FormProvider = ({ children }) => {
     currentStep: sessionStorage.getItem("current-step")
       ? sessionStorage.getItem("current-step")
       : "personal info",
-    enteredData: {},
+    enteredData: sessionStorage.getItem("entered-data")
+      ? sessionStorage.getItem("entered-data")
+      : {},
   });
 
   const value = { state, dispatch };

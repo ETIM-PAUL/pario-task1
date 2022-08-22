@@ -1,14 +1,11 @@
 @import "base.scss";
 
-.profile-container {
-  background-image: $set_bg_image;
-  background-repeat: no-repeat;
-  object-fit: cover;
+.component-container {
   height: auto;
   overflow: hidden;
 }
 
-.profile-inner {
+.component-inner {
   margin: 0 auto;
   padding: 5rem 3rem;
   width: 70%;
@@ -42,7 +39,7 @@
 
 .horizontal-line {
   margin-top: 15px;
-  width: 550px;
+  width: 500px;
   max-width: 550px;
   background-color: black;
   height: 1px;
@@ -50,19 +47,19 @@
 
 .horizontal-stage-indicator {
   background-color: $primary-color;
-  width: 150px;
+  width: 148px;
   height: 10px;
   border-radius: 10px;
   position: absolute;
-  top: 27.8%;
+  top: 228px;
 }
 
 .form-container {
   margin-top: 3rem;
-  width: 550px;
+  width: 500px;
 }
 
-.state-lga {
+.select-input-flex {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -79,7 +76,7 @@
   width: 350px;
 }
 .state-input {
-  width: 200px;
+  width: 120px;
 }
 
 .btn-flex {
